@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
-    }
+    let people = ["Finn", "Leia", "Luke", "Rey"]
+
+      var body: some View {
+          List(people, id: \.self) {
+              Text($0)
+          }
+      }
 }
 
 struct ContentView_Previews: PreviewProvider {
